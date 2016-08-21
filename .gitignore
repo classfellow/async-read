@@ -27,3 +27,6 @@ ipch/
 *.pch
 *.idb
 *.user
+Debug/
+Release/
+.sln
