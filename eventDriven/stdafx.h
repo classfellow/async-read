@@ -1,0 +1,42 @@
+// stdafx.h : include file for standard system include files,
+// or project specific include files that are used frequently, but
+// are changed infrequently
+//
+
+#pragma once
+
+#include "targetver.h"
+
+#include <stdio.h>
+#include <tchar.h>
+
+
+// Windows Header Files:
+#include <windows.h>
+// C RunTime Header Files
+#include <stdlib.h>
+#include <malloc.h>
+#include <memory.h>
+#include <tchar.h>
+
+// Local Header Files
+#include <shlobj.h>
+#include <assert.h>
+
+#include <shellapi.h>
+//
+// stl
+//
+#include <string>
+#include <vector>
+#include <map>
+#include <deque>
+#include <list>
+#include <algorithm>
+
+
+#include <atlbase.h>
+
+using namespace std;
+
+// TODO: reference additional headers your program requires here
