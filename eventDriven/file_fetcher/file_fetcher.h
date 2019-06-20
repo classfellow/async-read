@@ -1,7 +1,7 @@
-/* 
+/*
 * @author   classfellow@qq.com
 * @bf       FILE_FLAG_OVERLAPPED  way to read file
-**           
+**
 ****************************************************************************************/
 
 #pragma once
@@ -30,14 +30,14 @@ namespace file {
     };
 
 
-    struct Params{
-      explicit Params(const std::wstring &name):name_(name){
+    struct Params {
+      explicit Params(const std::wstring &name):name_(name) {
       }
       std::wstring name_;
     };
 
     struct State {
-      explicit State(FileFetcher* fetcher){
+      explicit State(FileFetcher* fetcher) {
         context.handler = fetcher;
         memset(&(context.overlapped), 0, sizeof(context.overlapped));
       }
@@ -48,9 +48,8 @@ namespace file {
     static FileFetcher* Create(const Params& params, FileFetcherDelegate* delegate);
 
     ~FileFetcher();
-    //UI线程调用
+
     void Start();
-    // UI线程调用
     void Stop();
 
     virtual void WillDestroyCurrentMessageLoop() OVERRIDE;
@@ -71,8 +70,8 @@ namespace file {
     void setFileHandle(HANDLE handle){ file_handle_ = handle;}
     DWORD ErrorCode() { return dwErrorCode_; }
   private:
-    
-    
+
+
     explicit FileFetcher(const Params& params, FileFetcherDelegate* delegate);
 
     void Init();
@@ -97,4 +96,4 @@ namespace file {
   public:
 
   };
-}// end file
+} // end file

@@ -61,8 +61,8 @@ namespace file{
       memset(const_cast<char*>(data_.c_str()), 0, data_.length());
   }
 
-  void FileFetcher::Init(){
-    
+  void FileFetcher::Init() {
+
   }
 
   void FileFetcher::Start() {
@@ -96,7 +96,7 @@ namespace file{
     }
   }
 
-  void FileFetcher::FetchProgress(float cur){
+  void FileFetcher::FetchProgress(float cur) {
   }
 
   void FileFetcher::WillDestroyCurrentMessageLoop() {
@@ -104,8 +104,8 @@ namespace file{
       base::Threads::Get(Threads::UI)->PostTask(Bind(this, &FileFetcher::FetchComplete));
     }
   }
-  
-  void FileFetcher::OnIOCompleted(base::MessagePumpForIO::IOContext* context, 
+
+  void FileFetcher::OnIOCompleted(base::MessagePumpForIO::IOContext* context,
     DWORD bytes_transfered,
     DWORD error) {
     base::Threads::Get(Threads::IO)->RemoveDestructionObserver(this);
@@ -136,4 +136,4 @@ namespace file{
       this, event,
       base::Source<FileFetcherDelegate>(content));
   }
-}//end file
+} //end file
