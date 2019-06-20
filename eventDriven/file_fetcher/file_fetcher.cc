@@ -33,7 +33,7 @@
 #include "../base/common_threads.h"
 #include "../base/notification_service.h"
 
-namespace file{
+namespace file {
   //static
   FileFetcher* FileFetcher::Create(const Params& params, FileFetcherDelegate* delegate) {
     return (new FileFetcher(params, delegate));

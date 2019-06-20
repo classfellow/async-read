@@ -1,7 +1,8 @@
 /*
-author  Banz
-*/
-
+* @author   classfellow@qq.com
+* @bf       Read file using FILE_FLAG_OVERLAPPED
+**
+****************************************************************************************/
 
 #include "stdafx.h"
 #include <iostream>
@@ -186,5 +187,5 @@ int _tmain(int argc, _TCHAR* argv[]) {
   unInit();
 
   system("pause");
-	return 0;
+  return 0;
 }

@@ -1,6 +1,6 @@
 /*
 * @author   classfellow@qq.com
-* @bf       FILE_FLAG_OVERLAPPED  way to read file
+* @bf       Read file using FILE_FLAG_OVERLAPPED
 **
 ****************************************************************************************/
 
